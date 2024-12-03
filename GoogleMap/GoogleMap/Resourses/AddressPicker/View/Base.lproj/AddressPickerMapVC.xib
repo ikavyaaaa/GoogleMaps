@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.otf">
+            <string>FONTSPRINGDEMO-ProximaNovaBold</string>
+        </array>
+        <array key="ProximaNova-Regular.otf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddressPickerMapVC" customModule="GoogleMap" customModuleProvider="target">
+            <connections>
+                <outlet property="btnConfirm" destination="nzG-gq-f7j" id="0zv-Q1-KG7"/>
+                <outlet property="labelAddress" destination="aof-ts-SDe" id="sYU-Sq-aIU"/>
+                <outlet property="labelTitle" destination="t0M-zZ-0za" id="hWt-SF-AsA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewAddress" destination="svu-gt-K6z" id="LCL-eY-vaR"/>
+                <outlet property="viewBackground" destination="QTo-cb-u03" id="7yj-WT-EBH"/>
+                <outlet property="viewHeader" destination="9Ef-oj-93U" id="llD-DY-PCW"/>
+                <outlet property="viewMap" destination="Vic-Te-WcC" id="hBU-yg-avL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTo-cb-u03">
+                    <rect key="frame" x="0.0" y="87" width="393" height="652"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vic-Te-WcC">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="652"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svu-gt-K6z">
+                            <rect key="frame" x="20" y="541.33333333333337" width="353" height="100.66666666666663"/>
+                            <subviews>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzG-gq-f7j">
+                                    <rect key="frame" x="243" y="34.333333333333258" width="100" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="100" id="0hk-8z-Wxb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="FONTSPRINGDEMO-ProximaNovaBold" family="FONTSPRING DEMO - Proxima Nova" pointSize="17"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Confirm">
+                                        <color key="titleColor" name="ePriceWhite"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="buttonConfirmTouched:" destination="-1" eventType="touchUpInside" id="7ds-9X-M55"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aof-ts-SDe">
+                                    <rect key="frame" x="20" y="15" width="215" height="70.666666666666671"/>
+                                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                    <color key="textColor" name="ePriceBlack"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="ePriceLightGray1"/>
+                            <constraints>
+                                <constraint firstItem="nzG-gq-f7j" firstAttribute="centerY" secondItem="svu-gt-K6z" secondAttribute="centerY" id="0Dp-2S-yOd"/>
+                                <constraint firstItem="nzG-gq-f7j" firstAttribute="leading" secondItem="aof-ts-SDe" secondAttribute="trailing" constant="8" symbolic="YES" id="2lS-uD-hNJ"/>
+                                <constraint firstItem="aof-ts-SDe" firstAttribute="top" secondItem="svu-gt-K6z" secondAttribute="top" constant="15" id="3mn-Pb-iDC"/>
+                                <constraint firstAttribute="bottom" secondItem="aof-ts-SDe" secondAttribute="bottom" constant="15" id="Cts-Wy-8OY"/>
+                                <constraint firstItem="aof-ts-SDe" firstAttribute="leading" secondItem="svu-gt-K6z" secondAttribute="leading" constant="20" id="Oxy-7A-LWu"/>
+                                <constraint firstAttribute="trailing" secondItem="nzG-gq-f7j" secondAttribute="trailing" constant="10" id="tl7-2i-sat"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="ePriceLightGray"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="ePriceWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Vic-Te-WcC" secondAttribute="trailing" id="4q2-FI-mPh"/>
+                        <constraint firstAttribute="bottom" secondItem="svu-gt-K6z" secondAttribute="bottom" constant="10" id="A9Y-ZJ-cRZ"/>
+                        <constraint firstItem="Vic-Te-WcC" firstAttribute="leading" secondItem="QTo-cb-u03" secondAttribute="leading" id="LTy-zg-sVF"/>
+                        <constraint firstItem="Vic-Te-WcC" firstAttribute="top" secondItem="QTo-cb-u03" secondAttribute="top" id="bpX-6c-feq"/>
+                        <constraint firstAttribute="trailing" secondItem="svu-gt-K6z" secondAttribute="trailing" constant="20" id="fL3-br-l2I"/>
+                        <constraint firstItem="svu-gt-K6z" firstAttribute="leading" secondItem="QTo-cb-u03" secondAttribute="leading" constant="20" id="ku2-mW-TLl"/>
+                        <constraint firstAttribute="bottom" secondItem="Vic-Te-WcC" secondAttribute="bottomMargin" constant="8" id="nwT-N2-zgh"/>
+                        <constraint firstItem="svu-gt-K6z" firstAttribute="height" secondItem="QTo-cb-u03" secondAttribute="height" multiplier="0.15454" id="tTp-bw-ePd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Ef-oj-93U">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="107"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0M-zZ-0za">
+                            <rect key="frame" x="108" y="52" width="177" height="35"/>
+                            <fontDescription key="fontDescription" name="FONTSPRINGDEMO-ProximaNovaBold" family="FONTSPRING DEMO - Proxima Nova" pointSize="30"/>
+                            <color key="textColor" name="ePriceWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="t0M-zZ-0za" firstAttribute="centerX" secondItem="9Ef-oj-93U" secondAttribute="centerX" id="G4j-u5-Frq"/>
+                        <constraint firstAttribute="bottom" secondItem="t0M-zZ-0za" secondAttribute="bottom" constant="20" id="ube-mJ-WG9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSF-D8-DIT">
+                    <rect key="frame" x="20" y="53.666666666666657" width="45" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="yXB-kR-TdS"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrowshape.backward" catalog="system">
+                        <color key="titleColor" name="ePriceBlack"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonBackouched:" destination="-1" eventType="touchUpInside" id="yu4-Nf-YJt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="ePriceLightGray"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Ef-oj-93U" secondAttribute="trailing" id="Agd-jg-e64"/>
+                <constraint firstItem="bSF-D8-DIT" firstAttribute="centerY" secondItem="t0M-zZ-0za" secondAttribute="centerY" id="JAK-Ie-i7P"/>
+                <constraint firstItem="9Ef-oj-93U" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mj8-Hv-Ixh"/>
+                <constraint firstItem="QTo-cb-u03" firstAttribute="top" secondItem="9Ef-oj-93U" secondAttribute="bottom" constant="-20" id="NAb-Gk-mbp"/>
+                <constraint firstItem="bSF-D8-DIT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="axL-ww-mbb"/>
+                <constraint firstItem="QTo-cb-u03" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bV8-WJ-Wx3"/>
+                <constraint firstItem="9Ef-oj-93U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="dzu-Vc-Zex"/>
+                <constraint firstAttribute="bottomMargin" secondItem="QTo-cb-u03" secondAttribute="bottom" constant="30" id="kZy-fn-PYo"/>
+                <constraint firstItem="9Ef-oj-93U" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.13928" id="nov-6i-1Bs"/>
+                <constraint firstItem="bSF-D8-DIT" firstAttribute="height" secondItem="t0M-zZ-0za" secondAttribute="height" multiplier="0.909091" id="pdL-Ik-Gl2"/>
+                <constraint firstAttribute="trailing" secondItem="QTo-cb-u03" secondAttribute="trailing" id="z9A-9R-p69"/>
+            </constraints>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrowshape.backward" catalog="system" width="128" height="104"/>
+        <namedColor name="ePriceBlack">
+            <color red="0.0080000003799796104" green="0.059000000357627869" blue="0.090000003576278687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ePriceLightGray">
+            <color red="0.86299997568130493" green="0.88599997758865356" blue="0.9100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ePriceLightGray1">
+            <color red="0.94900000095367432" green="0.9649999737739563" blue="0.98799997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ePriceWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

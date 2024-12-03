@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func buttonAddressTouched(_ sender: UIButton) {
+        let vc = AddressPickerMapVC.loadFromNib()
+        vc.delegate = self
+        push(vc)
+    }
 
 }
 
+extension ViewController: GetAddressDelegate {
+    func reverseGeoLocation(_ address: String, _ placemark: PlacemarkResults?) {
+    }
+}
